@@ -349,7 +349,7 @@ function passthrough(data, cb) {
 }
 
 function byteLengthWritable(data) {
-  if (!data.chunk) return 0
+  if (!data || !data.chunk) return 0
   return data.chunk.byteLength
 }
 
